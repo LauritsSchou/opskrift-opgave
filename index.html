@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      table,
-      th,
-      td {
-        border: 1px solid black;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +9,9 @@
   </head>
   <body>
     <header>
-      <h1>Pandekager</h1>
+      <div class="center">
+        <h1>Pandekager</h1>
+      </div>
 
       <img
         src="data:image/jpeg;base64,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"
@@ -24,95 +20,93 @@
         height="300"
       />
     </header>
-    <section>
-      <article>
+    <section id="history">
+      <div class="center">
         <h2>Pandekagens historie</h2>
-        <p>
-          Der er intet bedre end en god omgang gammeldags pandekager med is,
-          sirup, syltetøj, sukker, bær eller chokolade. Den lækre dessert kan
-          indtages på hyggelige sommeraftener i haven såvel som kolde vinterdage
-          under tæppet. Men hvad er grunden egentlig til, at vi kalder dem
-          “gammeldags pandekager”? Det siges angiveligt, at pandekagen går mere
-          end 500 år tilbage i historien - ja faktisk helt tilbage til 1490,
-          hvor hertugdatteren Anne af Bretagne søgte tilflugt hos en fattig
-          brændehugger under et uvejr. Brændehuggerens datter bagte ofte
-          fladbrød, men ønskede ikke at servere den slags fattigmandsmad for så
-          fine gæster. Derfor fandt hun på at bage fladbrødene helt tynde og
-          fylde dem med forskellige ingredienser.
-        </p>
-        <p>
-          En anden forklaring på pandekagens oprindelsen lyder sig på, at
-          danskerne engang fastede 40 dage op til påske. Dagen inden fasten
-          begyndte skulle spisekammeret tømmes for madvarer, der ikke måtte
-          spises under fasten, og som ikke kunne holde hele perioden igennem.
-          Her var der tale om æg, mælk og smør. Mel blev blandet med
-          ingredienserne, og pandekagen opstod. I dag er gammeldags pandekager
-          en klassisk dessert, som bliver serveret i mange hjem. Desserten er
-          ikke sæsonbetonet, men er kendt som en hyggelig ret, man kan servere
-          for familie og venner hele året rundt. Pandekagen er i dag blevet så
-          populær, at en hel dag er dedikeret til den lækre spise. Dagen er
-          bedre kendt som “Pandekagedag”. Pandekagedag fejres årligt første
-          tirsdag efter fastelavn. Denne dag er valgt på baggrund af en gammel
-          kristen tradition, kaldet hvede-tirsdag. Pandekagedag startede med at
-          blive afholdt i Danmark i 2006 og er inspireret af de engelsktalende
-          lande.
-        </p>
-      </article>
-      <article>
-        <h2>Ingredienser:</h2>
-        <ul>
-          <li>4 æg</li>
-          <li>150 gram hvedemel</li>
-          <li>25 gram smør</li>
-          <li>3 dl. sødmælk</li>
-          <li>1 knsp. salt</li>
-          <li>1 spsk. sukker</li>
-          <li>1 tsk. vanilje sukker</li>
-          <li>Smør til stegning</li>
-        </ul>
-        <p>
-          Der bliver cirka 12 pandekager alt efter pandens størrelse og
-          pandekagernes tykkelse.
-        </p>
-      </article>
-      <article>
-        <h2>Fremgangsmåde:</h2>
-        <ol>
-          <li>
-            Æg og mel piskes sammen. Heri piskes det varme smeltede smør, spæd
-            med mælk og tilføj salt, sukker og vanilje.
-          </li>
-          <li>
-            Varm smør op på panden til det er lysebrunt og bag pandekagerne i
-            det.
-          </li>
-          <li>
-            Server pandekagerne med sukker og syltetøj, blød vaniljeis eller
-            flødeskum.
-          </li>
-        </ol>
-        <p>
-          <b>Tips:</b> Det kan være en fordel at have en pande som kun bruges
-          til pandekager, for at undgå de hænger fast på panden. Da du ikke i så
-          høj grad har fastbrændte rester eller slidt pande efter høj varme.
-        </p>
-      </article>
-      <aside>
-        <h3>Næringsindhold pr. pandekage:</h3>
-        <table>
-          <tr>
-            <th>Protein</th>
-            <th>Kulhydrat</th>
-            <th>Fedt</th>
-          </tr>
-          <tr>
-            <td>3,7 gram</td>
-            <td>3,5 gram</td>
-            <td>11,7 gram</td>
-          </tr>
-        </table>
-      </aside>
+      </div>
+      <p>
+        Der er intet bedre end en god omgang gammeldags pandekager med is,
+        sirup, syltetøj, sukker, bær eller chokolade. Den lækre dessert kan
+        indtages på hyggelige sommeraftener i haven såvel som kolde vinterdage
+        under tæppet. Men hvad er grunden egentlig til, at vi kalder dem
+        “gammeldags pandekager”? Det siges angiveligt, at pandekagen går mere
+        end 500 år tilbage i historien - ja faktisk helt tilbage til 1490, hvor
+        hertugdatteren Anne af Bretagne søgte tilflugt hos en fattig
+        brændehugger under et uvejr. Brændehuggerens datter bagte ofte fladbrød,
+        men ønskede ikke at servere den slags fattigmandsmad for så fine gæster.
+        Derfor fandt hun på at bage fladbrødene helt tynde og fylde dem med
+        forskellige ingredienser.
+      </p>
+      <p>
+        En anden forklaring på pandekagens oprindelsen lyder sig på, at
+        danskerne engang fastede 40 dage op til påske. Dagen inden fasten
+        begyndte skulle spisekammeret tømmes for madvarer, der ikke måtte spises
+        under fasten, og som ikke kunne holde hele perioden igennem. Her var der
+        tale om æg, mælk og smør. Mel blev blandet med ingredienserne, og
+        pandekagen opstod. I dag er gammeldags pandekager en klassisk dessert,
+        som bliver serveret i mange hjem. Desserten er ikke sæsonbetonet, men er
+        kendt som en hyggelig ret, man kan servere for familie og venner hele
+        året rundt. Pandekagen er i dag blevet så populær, at en hel dag er
+        dedikeret til den lækre spise. Dagen er bedre kendt som “Pandekagedag”.
+        Pandekagedag fejres årligt første tirsdag efter fastelavn. Denne dag er
+        valgt på baggrund af en gammel kristen tradition, kaldet hvede-tirsdag.
+        Pandekagedag startede med at blive afholdt i Danmark i 2006 og er
+        inspireret af de engelsktalende lande.
+      </p>
     </section>
+    <section id="ingredients">
+      <h2>Ingredienser</h2>
+      <ul>
+        <li>4 æg</li>
+        <li>150 gram hvedemel</li>
+        <li>25 gram smør</li>
+        <li>3 dl. sødmælk</li>
+        <li>1 knsp. salt</li>
+        <li>1 spsk. sukker</li>
+        <li>1 tsk. vanilje sukker</li>
+        <li>Smør til stegning</li>
+      </ul>
+      <p>
+        Der bliver cirka 12 pandekager alt efter pandens størrelse og
+        pandekagernes tykkelse.
+      </p>
+    </section>
+    <section id="method">
+      <h2>Fremgangsmåde</h2>
+      <ol>
+        <li>
+          Æg og mel piskes sammen. Heri piskes det varme smeltede smør, spæd med
+          mælk og tilføj salt, sukker og vanilje.
+        </li>
+        <li>
+          Varm smør op på panden til det er lysebrunt og bag pandekagerne i det.
+        </li>
+        <li>
+          Server pandekagerne med sukker og syltetøj, blød vaniljeis eller
+          flødeskum.
+        </li>
+      </ol>
+      <p>
+        <b>Tips:</b> Det kan være en fordel at have en pande som kun bruges til
+        pandekager, for at undgå de hænger fast på panden. Da du ikke i så høj
+        grad har fastbrændte rester eller slidt pande efter høj varme.
+      </p>
+    </section>
+    <aside id="nutrition">
+      <h3>Næringsindhold pr. pandekage:</h3>
+      <table>
+        <tr>
+          <th>Protein</th>
+          <th>Kulhydrat</th>
+          <th>Fedt</th>
+        </tr>
+        <tr>
+          <td>3,7 gram</td>
+          <td>3,5 gram</td>
+          <td>11,7 gram</td>
+        </tr>
+      </table>
+    </aside>
     <footer>
       <p>
         Der findes utallige versioner af pandekager i dag, men en anden populær
@@ -123,8 +117,6 @@
       <a href="https://www.valdemarsro.dk/amerikanske-pandekager/"
         >Amerikanske pandekager</a
       >
-    </footer>
-    <footer>
       <p>Skrevet af Laurits Holm Schou</p>
 
       <p>
